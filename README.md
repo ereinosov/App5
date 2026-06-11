@@ -9,11 +9,17 @@
 ![Android Studio](https://img.shields.io/badge/Android%20Studio-Panda%204-3DDC84?style=flat&logo=androidstudio&logoColor=white)
 
 **Universidad:** Universidad Técnica Estatal de Quevedo (UTEQ)
+
 **Facultad:** Facultad de Ciencias de la Computación (FCC)
+
 **Carrera:** Software
+
 **Asignatura:** Aplicaciones Móviles "A"
+
 **Actividad:** Consumo de Web Services REST con Volley
+
 **Estudiante:** Eduardo Reinoso Vélez
+
 © 2026
 
 ---
