@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         Security.insertProviderAt(Conscrypt.newProvider(), 1)
         super.onCreate(savedInstanceState)
+        
+        // Inicializar Volley y Glide con configuración SSL
+        VolleySingleton.getInstance(this)
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

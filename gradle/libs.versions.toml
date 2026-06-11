@@ -13,7 +13,6 @@ gson = "2.11.0"
 glide = "4.16.0"
 conscrypt = "2.5.2"
 
-
 [libraries]
 conscrypt = { group = "org.conscrypt", name = "conscrypt-android", version.ref = "conscrypt" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
