@@ -26,15 +26,15 @@ class NoticiaAdapter(context: Context, var noticias: ArrayList<Noticia>) : Array
 
         val noticia = noticias[position]
 
-        val imgPortada      = view.findViewById<ImageView>(R.id.imgPortada)
-        val txtCategoria    = view.findViewById<TextView>(R.id.txtCategoria)
-        val txtTitular      = view.findViewById<TextView>(R.id.txtTitular)
-        val txtFecha        = view.findViewById<TextView>(R.id.txtFecha)
-        val txtDepartamento = view.findViewById<TextView>(R.id.txtDepartamento)
+        val imgPortada   = view.findViewById<ImageView>(R.id.imgPortada)
+        val txtCategoria = view.findViewById<TextView>(R.id.txtCategoria)
+        val txtTitular   = view.findViewById<TextView>(R.id.txtTitular)
+        val txtFecha     = view.findViewById<TextView>(R.id.txtFecha)
+        val txtUrl       = view.findViewById<TextView>(R.id.txtUrl)
 
         txtTitular.text = noticia.ntTitular
         txtFecha.text = "Publicada el: " + noticia.ntFecha
-        txtDepartamento.text = noticia.objDepartamento?.dpNombre
+        txtUrl.text = noticia.urlNoticiaCompleta
 
         txtCategoria.text = noticia.objCategoriaNotc?.gtTitular
         try {
@@ -51,10 +51,13 @@ class NoticiaAdapter(context: Context, var noticias: ArrayList<Noticia>) : Array
             .centerCrop()
             .into(imgPortada)
 
-        view.setOnClickListener {
+        val abrirNoticia = View.OnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(noticia.urlNoticiaCompleta))
             context.startActivity(intent)
         }
+        txtUrl.setOnClickListener(abrirNoticia)
+        imgPortada.setOnClickListener(abrirNoticia)
+        txtTitular.setOnClickListener(abrirNoticia)
 
         return view
     }

@@ -55,6 +55,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.conscrypt)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
@@ -63,6 +64,8 @@ dependencies {
     implementation(libs.volley)
     implementation(libs.gson)
     implementation(libs.glide)
+    implementation("com.github.bumptech.glide:okhttp3-integration:4.16.0")
+    annotationProcessor(libs.glide.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

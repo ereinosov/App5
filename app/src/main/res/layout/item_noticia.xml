@@ -4,51 +4,91 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="12dp">
-
-    <ImageView
-        android:id="@+id/imgPortada"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:scaleType="centerCrop"
-        android:src="@android:drawable/ic_menu_gallery"
-        android:contentDescription="Portada de la noticia" />
+    android:paddingHorizontal="16dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="16dp">
 
     <TextView
         android:id="@+id/txtCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:textStyle="bold"
-        android:textSize="14sp"
+        android:textSize="22sp"
         android:text="Categoría" />
 
     <TextView
         android:id="@+id/txtTitular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textColor="#000000"
-        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:textColor="#374151"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:text="Titular" />
 
-    <TextView
-        android:id="@+id/txtDepartamento"
+    <ImageView
+        android:id="@+id/imgPortada"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:textColor="#777777"
-        android:textSize="14sp"
-        android:text="Departamento" />
+        android:layout_height="200dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="Portada de la noticia" />
 
-    <TextView
-        android:id="@+id/txtFecha"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:textColor="#555555"
-        android:textSize="14sp"
-        android:text="Publicada el:" />
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_calendar"
+            android:contentDescription="Fecha" />
+
+        <TextView
+            android:id="@+id/txtFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#374151"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Publicada el:" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_link"
+            android:contentDescription="Enlace" />
+
+        <TextView
+            android:id="@+id/txtUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#3B82F6"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:autoLink="web"
+            android:text="https://uteq.edu.ec/..." />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#E5E7EB" />
 
 </LinearLayout>

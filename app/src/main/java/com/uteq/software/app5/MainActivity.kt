@@ -1,5 +1,6 @@
 package com.uteq.software.app5
-
+import org.conscrypt.Conscrypt
+import java.security.Security
 import android.os.Bundle
 import android.view.View
 import android.widget.ListView
@@ -18,6 +19,7 @@ import com.uteq.software.app5.services.VolleySingleton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        Security.insertProviderAt(Conscrypt.newProvider(), 1)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
